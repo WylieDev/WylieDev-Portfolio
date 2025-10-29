@@ -3,8 +3,19 @@
   --text: #fff;
   --accent: #b984db;
 }
-*{
-    text-decoration: none;
+
+.light {
+  --bg: #fafafa;
+  --text: #222;
+  --accent: #7209b7;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -14,47 +25,42 @@ body {
   transition: background 0.5s, color 0.5s;
 }
 
-.light {
-  --bg: #fafafa;
-  --text: #222;
-  --accent: #7209b7;
-}
-
+/* === Navbar === */
 header {
   position: sticky;
   top: 0;
-  z-index: 100;
   background: rgba(20, 20, 20, 0.9);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(114, 9, 183, 0.2);
+  z-index: 100;
 }
 
 .nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 50px;
+  padding: 15px 40px;
 }
 
 .logo {
-  font-size: 28px;
+  font-size: 26px;
   font-weight: 700;
 }
-
 .logo span {
   color: var(--accent);
 }
 
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
 .nav-links a {
   color: var(--text);
-  margin: 0 12px;
   font-size: 15px;
 }
-
 .nav-links a:hover {
   color: var(--accent);
 }
-
 #theme-toggle {
   background: none;
   border: none;
@@ -63,81 +69,125 @@ header {
   cursor: pointer;
 }
 
+/* === Hamburger === */
+.hamburger {
+  display: none;
+  font-size: 24px;
+  color: var(--text);
+  cursor: pointer;
+}
+
+/* === Hero === */
 .hero {
-  padding: 140px 20px;
   text-align: center;
+  padding: 130px 20px;
 }
-
 .hero h1 {
-  font-size: 2.2rem;
+  font-size: 2.3rem;
+  margin-bottom: 10px;
 }
-
 .hero p {
   color: #b5b5b5;
-  margin: 10px 0;
+  margin: 8px 0;
 }
-
 .hero button {
-  background-color: var(--accent);
+  background: var(--accent);
   color: #fff;
   border: none;
   padding: 12px 22px;
   border-radius: 25px;
   cursor: pointer;
   font-weight: 600;
-  margin: 8px;
+  margin: 6px;
+  transition: 0.3s;
 }
-
 .hero button:hover {
   opacity: 0.85;
+  transform: scale(1.05);
 }
 
+/* === Fade in effect === */
 section {
   max-width: 900px;
   margin: auto;
   padding: 100px 20px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.8s ease;
+}
+section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
+/* === Portfolio === */
 .portfolio-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
-  margin-top: 30px;
 }
-
 .project {
   background: rgba(255, 255, 255, 0.05);
   border-radius: 15px;
   padding: 15px;
   text-align: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: 0.3s;
 }
-
 .project:hover {
   transform: scale(1.03);
   box-shadow: 0 0 15px rgba(114, 9, 183, 0.4);
 }
-
 .project img {
   width: 100%;
   border-radius: 10px;
 }
 
+/* === Social icons === */
+.social-icons {
+  margin-top: 20px;
+}
 .social-icons a {
   color: var(--text);
   font-size: 25px;
   margin: 0 10px;
   transition: 0.3s;
 }
-
 .social-icons a:hover {
   color: var(--accent);
   transform: scale(1.2);
 }
 
+/* === Footer === */
 .footer {
   background: #101010;
   text-align: center;
-  padding: 40px 0;
+  padding: 30px 0;
   color: #777;
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: rgba(20, 20, 20, 0.95);
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    padding: 20px;
+    border-left: 1px solid var(--accent);
+  }
+  .nav-links.show {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  section {
+    padding: 60px 15px;
+  }
+  .hero h1 {
+    font-size: 1.8rem;
+  }
 }

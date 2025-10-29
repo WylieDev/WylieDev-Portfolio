@@ -3,94 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wylie | Portfolio</title>
+  <title>WylieDev | Portfolio</title>
   <link rel="stylesheet" href="style.css" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
   <script src="https://kit.fontawesome.com/1c2b7d45f2.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <header>
     <nav class="nav">
       <a class="logo" href="#home">Wylie<span>Dev</span></a>
-      
+
       <div class="nav-links" id="nav-links">
-        <a class="navbar" href="#home">Home</a>
-        <a class="navbar" href="#about">About</a>
-        <a class="navbar" href="#services">Services</a>
-        <a class="navbar" href="#portfolio">Portfolio</a>
-        <a class="navbar" href="#process">Process</a>
-        <a class="navbar" href="#pricing">Pricing</a>
-        <a class="navbar" href="#contact">Contact</a>
-        <button id="theme-toggle"><i class="fas fa-moon"></i></button>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#contact">Contact</a>
       </div>
 
-      <div class="hamburger" id="hamburger">
-        <i class="fas fa-bars"></i>
+      <div class="nav-actions">
+        <button id="theme-toggle" title="Toggle theme"><i class="fas fa-moon"></i></button>
+        <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
       </div>
     </nav>
   </header>
 
   <section id="home" class="hero">
     <div class="hero-text">
-      <h1>Fast, responsive landing pages — delivered in 48 hours.</h1>
-      <p>I build clean HTML, CSS, and JavaScript landing pages that load fast and look perfect on all devices.</p>
-      <p><strong>Price:</strong> One-page from $50.</p>
+      <h1>Modern, Fast & Responsive Websites</h1>
+      <p>I create clean, mobile-friendly websites using HTML, CSS, and JavaScript.</p>
       <div class="hero-buttons">
         <button onclick="location.href='mailto:wyliedev0@gmail.com'" class="btn-primary">Get Started</button>
         <button onclick="window.open('https://github.com/WylieDev','_blank')" class="btn-secondary">View Portfolio</button>
       </div>
-    </div>
-
-    <div class="spline">
-      <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.89/build/spline-viewer.js"></script>
-      <spline-viewer url="https://prod.spline.design/BP17-BNoNtEvnsCq/scene.splinecode"></spline-viewer>
+      <div class="module">
+        <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.89/build/spline-viewer.js"></script>
+        <spline-viewer url="https://prod.spline.design/E4Xw-OTtO1d8MJ4v/scene.splinecode"></spline-viewer>
+      </div>
     </div>
   </section>
 
   <section id="about" class="about">
-    <h1>About Me</h1>
-    <p>
-      Hi — I’m <strong>Munkhtur</strong>, a frontend developer from Mongolia. I specialize in building fast, modern, and fully responsive websites using HTML, CSS, and JavaScript.
-      I help startups and small businesses launch their websites quickly with clean and professional code.
-    </p>
-    <p>💡 I deliver within <strong>24–48 hours</strong> and accept payments via Wise.</p>
+    <h2>About Me</h2>
+    <p>Hello! I'm <strong>WylieDev</strong>, a self-taught frontend developer from Mongolia.</p>
+    <p>I build landing pages, portfolios, and simple business sites that look stunning on any device.</p>
   </section>
 
   <section id="services" class="services">
-    <h1>Services</h1>
-    <div class="service-item">
-      <h3>Basic — Landing Page</h3>
-      <p>48h / $50 — Responsive HTML/CSS single-page design. 1 free revision included.</p>
-    </div>
-    <div class="service-item">
-      <h3>Pro — 3-page Site</h3>
-      <p>3 days / $120 — Home, About, and Contact pages + contact form integration.</p>
-    </div>
-    <div class="service-item">
-      <h3>Urgent — 24h Delivery</h3>
-      <p>+30% fee for express delivery.</p>
+    <h2>Services</h2>
+    <div class="service-list">
+      <div class="service-card">
+        <h3>Landing Page</h3>
+        <p>1-page design, fast & clean, delivery within 48 hours — <b>$50</b></p>
+      </div>
+      <div class="service-card">
+        <h3>Portfolio Website</h3>
+        <p>3 pages (Home, About, Contact), 3-day delivery — <b>$120</b></p>
+      </div>
+      <div class="service-card">
+        <h3>Urgent Project</h3>
+        <p>Delivery in 24h — <b>+30%</b> extra fee</p>
+      </div>
     </div>
   </section>
 
   <section id="portfolio" class="portfolio">
-    <h1>Portfolio</h1>
+    <h2>Portfolio</h2>
     <div class="portfolio-grid">
-      <div class="project"><img src="screenshot1.png" alt="Landing Page"/><h3>Business Landing Page</h3></div>
-      <div class="project"><img src="screenshot2.png" alt="Portfolio Site"/><h3>Personal Portfolio</h3></div>
-      <div class="project"><img src="screenshot3.png" alt="Ecommerce"/><h3>Product Showcase</h3></div>
+      <div class="project fade"><img src="./screenshot1.png" alt="Landing Page"/><h3>Landing Page</h3></div>
+      <div class="project fade"><img src="./screenshot2.png" alt="Portfolio"/><h3>Portfolio Design</h3></div>
+      <div class="project fade"><img src="./screenshot3.png" alt="Business"/><h3>Business Site</h3></div>
     </div>
   </section>
 
   <section id="contact" class="contact">
-    <h1>Contact Me</h1>
-    <p><strong>Email:</strong> <a href="mailto:wyliedev0@gmail.com">wyliedev0@gmail.com</a></p>
+    <h2>Contact Me</h2>
+    <p><ion-icon name="mail-outline"></ion-icon> <a class="mail" href="mailto:wyliedev0@gmail.com">wyliedev0@gmail.com</a></p>
     <div class="social-icons">
-      <a href="https://github.com/WylieDev" target="_blank"><i class="fab fa-github"></i></a>
-      <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://github.com/WylieDev" target="_blank"><ion-icon name="logo-github"></ion-icon></a>
+      <a href="https://instagram.com" target="_blank"><ion-icon name="logo-instagram"></ion-icon></a>
     </div>
   </section>
 
-  <footer class="footer">
-    <h3>© 2025 WylieDev — Available for freelance projects worldwide.</h3>
+  <footer>
+    <p>© 2025 WylieDev — All rights reserved.</p>
   </footer>
 
   <script src="script.js"></script>

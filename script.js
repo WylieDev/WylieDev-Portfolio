@@ -1,30 +1,28 @@
-// Fade-in animation
+// Fade-in effect
 const sections = document.querySelectorAll("section");
-
 window.addEventListener("scroll", () => {
-  sections.forEach((sec) => {
-    const top = window.scrollY;
-    const offset = sec.offsetTop - 400;
-    const height = sec.offsetHeight;
-
-    if (top >= offset && top < offset + height) {
-      sec.style.opacity = "1";
-      sec.style.transform = "translateY(0)";
-      sec.style.transition = "0.8s ease";
-    } else {
-      sec.style.opacity = "0";
-      sec.style.transform = "translateY(50px)";
-    }
+  const top = window.scrollY + window.innerHeight * 0.8;
+  sections.forEach(sec => {
+    if (top > sec.offsetTop) sec.classList.add("visible");
   });
 });
 
-// Dark-Light theme toggle
+// Theme toggle
 const toggleBtn = document.getElementById("theme-toggle");
-const body = document.body;
-
 toggleBtn.addEventListener("click", () => {
-  body.classList.toggle("light");
-  toggleBtn.innerHTML = body.classList.contains("light")
+  document.body.classList.toggle("light");
+  toggleBtn.innerHTML = document.body.classList.contains("light")
     ? '<i class="fas fa-sun"></i>'
     : '<i class="fas fa-moon"></i>';
+});
+
+// Hamburger menu
+const hamburger = document.getElementById("hamburger");
+const navLinks = document.getElementById("nav-links");
+
+hamburger.addEventListener("click", () => {
+  navLinks.classList.toggle("show");
+  hamburger.innerHTML = navLinks.classList.contains("show")
+    ? '<i class="fas fa-times"></i>'
+    : '<i class="fas fa-bars"></i>';
 });

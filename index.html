@@ -9,9 +9,10 @@
 </head>
 <body>
   <header>
-    <div class="nav">
+    <nav class="nav">
       <a class="logo" href="#home">Wylie<span>Dev</span></a>
-      <div class="nav-links">
+      
+      <div class="nav-links" id="nav-links">
         <a class="navbar" href="#home">Home</a>
         <a class="navbar" href="#about">About</a>
         <a class="navbar" href="#services">Services</a>
@@ -21,7 +22,11 @@
         <a class="navbar" href="#contact">Contact</a>
         <button id="theme-toggle"><i class="fas fa-moon"></i></button>
       </div>
-    </div>
+
+      <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+      </div>
+    </nav>
   </header>
 
   <section id="home" class="hero">
@@ -33,113 +38,61 @@
         <button onclick="location.href='mailto:wyliedev0@gmail.com'" class="btn-primary">Get Started</button>
         <button onclick="window.open('https://github.com/WylieDev','_blank')" class="btn-secondary">View Portfolio</button>
       </div>
+    </div>
+
+    <div class="spline">
       <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.89/build/spline-viewer.js"></script>
       <spline-viewer url="https://prod.spline.design/BP17-BNoNtEvnsCq/scene.splinecode"></spline-viewer>
     </div>
   </section>
 
   <section id="about" class="about">
-    <div class="about-text">
-      <h1>About Me</h1>
-      <p>
-        Hi — I’m <strong>Munkhtur</strong>, a frontend developer from Mongolia. I specialize in building fast, modern, and fully responsive websites using HTML, CSS, and JavaScript. 
-        I help startups and small businesses launch their websites quickly with clean and professional code.
-      </p>
-      <p>
-        💡 I deliver within <strong>24–48 hours</strong> and accept payments via Wise.  
-        Communication in English — No problem.
-      </p>
-    </div>
+    <h1>About Me</h1>
+    <p>
+      Hi — I’m <strong>Munkhtur</strong>, a frontend developer from Mongolia. I specialize in building fast, modern, and fully responsive websites using HTML, CSS, and JavaScript.
+      I help startups and small businesses launch their websites quickly with clean and professional code.
+    </p>
+    <p>💡 I deliver within <strong>24–48 hours</strong> and accept payments via Wise.</p>
   </section>
 
   <section id="services" class="services">
-    <div class="services-text">
-      <h1>Services</h1>
-      <div class="service-item">
-        <h3>Basic — Landing Page</h3>
-        <p>48h / $50 — Responsive HTML/CSS single-page design. 1 free revision included.</p>
-      </div>
-      <div class="service-item">
-        <h3>Pro — 3-page Site</h3>
-        <p>3 days / $120 — Home, About, and Contact pages + contact form integration.</p>
-      </div>
-      <div class="service-item">
-        <h3>Urgent — 24h Delivery</h3>
-        <p>+30% fee for express delivery.</p>
-      </div>
+    <h1>Services</h1>
+    <div class="service-item">
+      <h3>Basic — Landing Page</h3>
+      <p>48h / $50 — Responsive HTML/CSS single-page design. 1 free revision included.</p>
+    </div>
+    <div class="service-item">
+      <h3>Pro — 3-page Site</h3>
+      <p>3 days / $120 — Home, About, and Contact pages + contact form integration.</p>
+    </div>
+    <div class="service-item">
+      <h3>Urgent — 24h Delivery</h3>
+      <p>+30% fee for express delivery.</p>
     </div>
   </section>
 
   <section id="portfolio" class="portfolio">
-    <h1 class="portfolio-title">Portfolio</h1>
-    <p>Recent projects — fast, minimal, and responsive.</p>
+    <h1>Portfolio</h1>
     <div class="portfolio-grid">
-      <div class="project">
-        <img src="screenshot1.png" alt="Landing Page" />
-        <h3>Business Landing Page</h3>
-      </div>
-      <div class="project">
-        <img src="screenshot2.png" alt="Portfolio Site" />
-        <h3>Personal Portfolio Site</h3>
-      </div>
-      <div class="project">
-        <img src="screenshot3.png" alt="Ecommerce" />
-        <h3>Product Showcase</h3>
-      </div>
-    </div>
-  </section>
-
-  <section id="process" class="process">
-    <h1>Process</h1>
-    <p>
-      1️⃣ Send project brief & assets.<br />
-      2️⃣ 50% upfront payment.<br />
-      3️⃣ Delivery within 24–48 hours.<br />
-      4️⃣ Revisions & final delivery.
-    </p>
-  </section>
-
-  <section id="pricing" class="pricing">
-    <h1>Pricing</h1>
-    <h3>Landing Page — $50 (48h)</h3>
-    <h3>3-page Website — $120 (3 days)</h3>
-    <h3>Rush Delivery — +30%</h3>
-  </section>
-
-  <section id="testimonials" class="testimonials">
-    <h1>Testimonials</h1>
-    <div class="testimonial">
-      <p>"Delivered exactly what I needed — clean, fast, and mobile optimized!"</p>
-      <span>- Client from Singapore</span>
-    </div>
-    <div class="testimonial">
-      <p>"Excellent communication and very professional. Highly recommend!"</p>
-      <span>- Startup Founder, USA</span>
-    </div>
-    <div class="testimonial">
-      <p>"Perfect delivery in less than 48 hours. I’ll hire again soon!"</p>
-      <span>- Agency Owner, Germany</span>
+      <div class="project"><img src="screenshot1.png" alt="Landing Page"/><h3>Business Landing Page</h3></div>
+      <div class="project"><img src="screenshot2.png" alt="Portfolio Site"/><h3>Personal Portfolio</h3></div>
+      <div class="project"><img src="screenshot3.png" alt="Ecommerce"/><h3>Product Showcase</h3></div>
     </div>
   </section>
 
   <section id="contact" class="contact">
     <h1>Contact Me</h1>
-    <p>Got a project in mind? Let’s make it happen!</p>
     <p><strong>Email:</strong> <a href="mailto:wyliedev0@gmail.com">wyliedev0@gmail.com</a></p>
-    <p><strong>Available for freelance & remote work.</strong></p>
-
     <div class="social-icons">
       <a href="https://github.com/WylieDev" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
     </div>
   </section>
 
-  <footer id="footer" class="footer">
-    <h3>© 2025 WylieDev — Available for global freelance projects.</h3>
+  <footer class="footer">
+    <h3>© 2025 WylieDev — Available for freelance projects worldwide.</h3>
   </footer>
 
   <script src="script.js"></script>
 </body>
 </html>
-
-

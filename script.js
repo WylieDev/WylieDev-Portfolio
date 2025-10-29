@@ -1,9 +1,9 @@
-// Fade-in effect
+// Section fade animation
 const sections = document.querySelectorAll("section");
 window.addEventListener("scroll", () => {
-  const top = window.scrollY + window.innerHeight * 0.8;
-  sections.forEach(sec => {
-    if (top > sec.offsetTop) sec.classList.add("visible");
+  const trigger = window.scrollY + window.innerHeight * 0.8;
+  sections.forEach((s) => {
+    if (trigger > s.offsetTop) s.classList.add("visible");
   });
 });
 
@@ -19,10 +19,10 @@ toggleBtn.addEventListener("click", () => {
 // Hamburger menu
 const hamburger = document.getElementById("hamburger");
 const navLinks = document.getElementById("nav-links");
-
 hamburger.addEventListener("click", () => {
   navLinks.classList.toggle("show");
   hamburger.innerHTML = navLinks.classList.contains("show")
     ? '<i class="fas fa-times"></i>'
     : '<i class="fas fa-bars"></i>';
 });
+
